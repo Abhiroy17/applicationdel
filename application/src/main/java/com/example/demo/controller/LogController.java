@@ -23,7 +23,7 @@ public class LogController {
 	LogModel logModel;
 	
 	@GetMapping("/checkIn")
-	public LogModel addCheckin(@RequestParam String name) {
+	public void addCheckin(@RequestParam String name) {
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");  
 	    Date dt = new Date();
 	    String string=formatter.format(dt);
@@ -35,12 +35,12 @@ public class LogController {
 	    logModel.setName(name);
 	    logModel.setId(name+time);
 	    logModel.setLogType("IN");
-		return logservice.saveLogModel(logModel);
+		 logservice.saveLogModel(logModel);
 		
 	}
 	
 	@GetMapping("/checkOut")
-	public LogModel addCheckout(@RequestParam String name) {
+	public void addCheckout(@RequestParam String name) {
 		
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");  
 	    Date dt = new Date();
@@ -53,7 +53,7 @@ public class LogController {
 	    logModel.setName(name);
 	    logModel.setId(name+time);
 	    logModel.setLogType("OUT");
-		return logservice.saveLogModel(logModel);
+		 logservice.saveLogModel(logModel);
 		
 	}
 	@GetMapping("/getLog")
