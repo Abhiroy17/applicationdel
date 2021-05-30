@@ -28,8 +28,7 @@ public class LogModel {
 	
 	@Override
 	public String toString() {
-		return "LogModel [LogType=" + logType + ", Date=" + date + ", Time=" + time + ", Id=" + id + ", Name=" + name
-				+ "]";
+		return "[LogType=" + logType + ", Date=" + date + ", Time=" + time + ", Id=" + id + "]";
 	}
 	/**
 	 * @return the id
