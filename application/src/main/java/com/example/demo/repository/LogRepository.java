@@ -10,6 +10,6 @@ import com.example.demo.entity.LogModel;
 public interface LogRepository extends JpaRepository<LogModel, String> {
 	
 	
-	@Query(value = "SELECT * FROM LOG_TABLE WHERE date = ?1", nativeQuery = true)
+	@Query(value = "SELECT * FROM customerlog.LOG_TABLE WHERE date = ?1", nativeQuery = true)
 	public List<LogModel> getLogModel(String date);
 }
