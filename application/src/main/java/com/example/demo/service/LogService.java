@@ -18,7 +18,7 @@ public class LogService {
 	}
 	
 	public List<LogModel> getLogModel(String date){
-		return repository.getLogModel(date);
+		return repository.findByDate(date);
 	}
 	
 	public List<LogModel> getAllLogModels(){
