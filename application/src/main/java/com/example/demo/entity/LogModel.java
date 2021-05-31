@@ -19,17 +19,32 @@ import org.springframework.stereotype.Component;
 @Entity
 @Table(name = "LOG_TABLE")
 public class LogModel {
-	@Id
-	private String id;
 	private String name;
 	private String logType;
 	private String date;
 	private String time;
+	@Id
+	private String id;
 	
-	@Override
+	
+	
+	
+	
+
+
+	
+	
+	
+	
+	
+	
+	/*@Override
 	public String toString() {
-		return "[LogType=" + logType + ", Date=" + date + ", Time=" + time + ", Id=" + id + "]";
-	}
+		return "LogModel [id=" + id + ", name=" + name + ", logType=" + logType + ", date=" + date + ", time=" + time
+				+ "]";
+	}*/
+
+
 	/**
 	 * @return the id
 	 */
